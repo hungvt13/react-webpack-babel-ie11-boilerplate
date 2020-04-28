@@ -1,7 +1,7 @@
 import React from 'React';
 import Axios from 'axios';
 
-const userList = data => data.map((data) => <li key={data.id} >{data.name}</li>);
+const userList = data => data.map((data) => <li className="list-group-item" key={data.id} >{data.name}</li>);
 
 class UserList extends React.Component {
   state = {
@@ -19,7 +19,7 @@ class UserList extends React.Component {
 
   render() {
     return (
-      <ul>
+      <ul className="list-group">
         {userList(this.state.userData)}
       </ul>
     )
